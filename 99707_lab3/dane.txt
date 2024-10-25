@@ -1,0 +1,8 @@
+Szelepusta, 24, hubert.szelepusta@gmail.com, polska, visa, CPP, Java
+Szelepusta, 24, hubert.szelepusta@gmail.com, polska, visa, CPP, Java
+Szelepusta, 24, hubert.szelepusta@gmail.com, polska, visa, CPP, Java
+Szelepusta, 24, hubert.szelepusta@gmail.com, polska, visa, CPP, Java
+Szelepusta, 24, hubert.szelepusta@gmail.com, polska, visa, CPP
+Morawski, 25, hubert.szelepusta@gmail.com, polska, eurocard, C#, PHP
+Tarka, 55, hubert.szelepusta@gmail.com, anglia, przelew-bankowy, Java
+Tarka, 55, hubert.szelepusta@gmail.com, anglia, przelew-bankowy, Java
