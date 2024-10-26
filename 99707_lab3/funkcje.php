@@ -14,21 +14,24 @@ if (isset($_REQUEST["submit"])) {
 function dodaj() {
     $dane = "";
     if (isset($_REQUEST["nazwisko"])&&isset($_REQUEST["wiek"])&&isset($_REQUEST["email"])&&isset($_REQUEST["panstwo"])&&isset($_REQUEST["sposobyPlatnosci"])) {
-        $dane .= htmlspecialchars($_REQUEST['nazwisko']).", ";
-        $dane .= htmlspecialchars($_REQUEST['wiek']).", ";
-        $dane .= htmlspecialchars($_REQUEST['email']).", ";
-        $dane .= htmlspecialchars($_REQUEST['panstwo']).", ";
-        $dane .= htmlspecialchars($_REQUEST['sposobyPlatnosci']).", ";
+        foreach($_POST  as $key=>$value){
+            if($key!="submit"&&!is_array($value)){
+                $dane .= htmlspecialchars($value).",";
+            }
+        }
     }
     else{
         echo "Nie podano wszystkich danych";
         return;
     }
+
     $wybraneTutoriale="";
     foreach($_REQUEST['jezyki'] as $jezyk) {
         $wybraneTutoriale .= $jezyk.", ";
     }
+
     $dane .=substr($wybraneTutoriale,0,strlen($wybraneTutoriale)-2)."\n";
+
     @ $wp = fopen("dane.txt","a",1);
     if ($wp)
     { 
@@ -45,7 +48,7 @@ function pokaz_zamowienie($tut) {
         echo "
         <table border=1>
         <tr>
-            <th>Nazwisko</th><th>Wiek</th><th>Email</th><th>Panstwo</th><th>Sposob platnosci</th><th colspan=9>Jezyki</th>
+            <th>Nazwisko</th><th>Wiek</th><th>Panstwo</th><th>Email</th><th>Sposob platnosci</th><th colspan=9>Jezyki</th>
         </tr>";
         for ( $i=0; $i<count($plik); $i++)
         {

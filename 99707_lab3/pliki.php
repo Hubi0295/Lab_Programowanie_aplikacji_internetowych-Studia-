@@ -2,10 +2,9 @@
     <head>
     </head>
     <body>
-    <form method="GET" action="pliki.php">
+    <form method="POST" action="pliki.php">
     <strong>Zamawiam tutorial z języka:</strong><br>
     <?php
-    include_once "funkcje.php";
     echo "<label for=nazwisko>Nazwisko: </label><input type=text id=nazwisko name=nazwisko><br>";
     echo "<label for=wiek>Wiek: </label><input type=text id=wiek name=wiek><br>";
     $panstwo = ["polska","niemcy","anglia","brazylia"];
@@ -28,12 +27,13 @@
     {
         echo "<input type=radio id=$i.platnosc value=$sposobyPlatnosci[$i] name=sposobyPlatnosci><label for=$i.platnosc>$sposobyPlatnosci[$i]</label>";
     }
-    echo "<button type=reset>Wyczysc</button>";
+    echo "<br><br><button type=reset>Wyczysc</button>";
     echo "<button type=submit name=submit value=zapisz>Zapisz</button>";
     echo "<button type=submit name=submit value=pokaz>Pokaz</button>";
     echo "<button type=submit name=submit value=php>PHP</button>";
     echo "<button type=submit name=submit value=cpp>CPP</button>";
     echo "<button type=submit name=submit value=java>Java</button>";
+    include_once "funkcje.php";
     ?>
     </form> 
 
