@@ -3,4 +3,4 @@ Nowak,23,polska,nowak@gmail.com,przelew-bankowy,Java, CSS, CPP, HTML, JavaScript
 Dąbrowska,26,polska,dabrowska@gmail.com,eurocard,Java, CPP, HTML, CSS, XML
 wojcik,21,anglia,wojcik@o2.pl,przelew-bankowy,C#, HTML, CSS, XML, PHP, JavaScript
 Lewandowski,33,brazylia,lewa@wp.pl,visa,C, CPP, Java, C#, HTML, CSS, XML, PHP, JavaScript
-Szelepusta,21,niemcy,hubert.szelepusta@gmail.com,visa,CPP
+Szelepusta,21,polska,hubert.szelepusta@gmail.com,visa,Java

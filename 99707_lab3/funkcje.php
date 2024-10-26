@@ -13,43 +13,44 @@ if (isset($_REQUEST["submit"])) {
 
 function dodaj() {
     $dane = "";
-    if (isset($_REQUEST["nazwisko"])&&isset($_REQUEST["wiek"])&&isset($_REQUEST["email"])&&isset($_REQUEST["panstwo"])&&isset($_REQUEST["sposobyPlatnosci"])) {
+    if (isset($_REQUEST["nazwisko"])&&$_REQUEST["nazwisko"]!=""&&isset($_REQUEST["wiek"])&&$_REQUEST["wiek"]!=""&&isset($_REQUEST["email"])&&$_REQUEST["email"]!=""&&isset($_REQUEST["panstwo"])&&isset($_REQUEST["sposobyPlatnosci"])&&isset($_REQUEST["jezyki"])) {
         foreach($_POST  as $key=>$value){
             if($key!="submit"&&!is_array($value)){
                 $dane .= htmlspecialchars($value).",";
             }
         }
+        $wybraneTutoriale="";
+        foreach($_REQUEST['jezyki'] as $jezyk) {
+            $wybraneTutoriale .= $jezyk.", ";
+        }
+    
+        $dane .=substr($wybraneTutoriale,0,strlen($wybraneTutoriale)-2)."\n";
+    
+        @ $wp = fopen("dane.txt","a",1);
+        if ($wp)
+        { 
+            fwrite($wp,$dane);
+        }
+        else{
+            echo "Nie mozna zapisac do pliku";
+        }
+        fclose($wp);
     }
     else{
-        echo "Nie podano wszystkich danych";
-        return;
+        echo "<br>Nie podano wszystkich danych";
     }
 
-    $wybraneTutoriale="";
-    foreach($_REQUEST['jezyki'] as $jezyk) {
-        $wybraneTutoriale .= $jezyk.", ";
-    }
-
-    $dane .=substr($wybraneTutoriale,0,strlen($wybraneTutoriale)-2)."\n";
-
-    @ $wp = fopen("dane.txt","a",1);
-    if ($wp)
-    { 
-        fwrite($wp,$dane);
-        exit;
-    }
-    fclose($wp);
 }
 
 function pokaz_zamowienie($tut) {
     @ $plik = file("dane.txt");
-    if ($plik)
-    { 
-        echo "
+    echo "
         <table border=1>
         <tr>
             <th>Nazwisko</th><th>Wiek</th><th>Panstwo</th><th>Email</th><th>Sposob platnosci</th><th colspan=9>Jezyki</th>
         </tr>";
+    if ($plik)
+    { 
         for ( $i=0; $i<count($plik); $i++)
         {
             $dane = explode(",",$plik[$i]);
@@ -61,10 +62,11 @@ function pokaz_zamowienie($tut) {
                 echo "</tr>";
             }
         }
-        echo "</table>";
-        exit;
     }
+    else{
+        echo "<br>Nie mozna otworzyc pliku<br>";
+    }
+    echo "</table>";
 
-    fclose($plik);
    }   
 ?>
