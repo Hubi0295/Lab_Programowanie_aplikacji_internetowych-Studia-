@@ -37,5 +37,22 @@
     <button type="reset" value="wyslij">Anuluj</button>
 
     </form>
+    <form method="GET" action="odbierz2.php">
+        <label>Nazwisko: </label><input type="text" name="nazwisko"/><br>
+        <label>Wiek: </label><input type="number" name="wiek"/><br>
+        <label>Panstwo:</label> <select name="panstwo"><option value="Polska">Polska</option><option value="Hiszpania">Hiszpania</option><option value="Wlochy">Wlochy</option></select><br>
+        <label>Adres e-mail: </label><input type="email" name="email"/><br>
+    <strong>Zamawiam tutorial z jezyka</strong><br>
+    <label>PHP</label><input type="checkbox" name="PHP"/>
+    <label>C/C++</label><input type="checkbox" name="C/C++"/>
+    <label>Java</label><input type="checkbox" name="Java"/><br>
+    <strong>Sposob zaplaty</strong><br>
+    <label>Eurocard</label><input type="radio" name="sposob_platnosci" value="eurocard"/>
+    <label>Visa</label><input type="radio" name="sposob_platnosci" value="visa"/>
+    <label>Przelew</label><input type="radio" name="sposob_platnosci" value="przelew"/><br>
+    <button type="submit" value="wyslij">Wyslij</button>
+    <button type="reset" value="wyslij">Anuluj</button>
+
+    </form>
 </body>
 </html>
