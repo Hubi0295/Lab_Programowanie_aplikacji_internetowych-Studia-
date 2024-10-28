@@ -1,0 +1,6 @@
+Szelepusta, 21, polska, hubert.szelepusta@gmail.com, visa, Java, HTML
+Testowy, 22, polska, hubert.szelepusta@gmail.com, visa, CPP, Java
+Kowalski, 22, anglia, kowal@gmail.com, eurocard, CSS, XML, PHP, javaScript
+Nowak, 66, brazylia, nowak@o2.pl, przelew-bankowy, C, C#, HTML, CSS, XML, javaScript
+Jakubowski, 76, polska, jakub.owski@o2.pl, visa, C, CPP, Java, C#, HTML, CSS, XML, PHP, javaScript
+Tarka, 65, anglia, hubert.szelepusta@gmail.com, visa, C#
