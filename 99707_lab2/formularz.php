@@ -1,5 +1,6 @@
 <html>
 <head>
+        <!-- komentarz-->
 </head>
 <body>
 <form method="GET" action="odbierz3.php">
