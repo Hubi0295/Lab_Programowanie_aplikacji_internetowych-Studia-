@@ -1,10 +1,10 @@
 <html>
     <head>
-        <!-- tu bedzie inaczej
-        
-        a
-
-        a
+        <!-- 
+        komentarz
+        kom
+        kom
+        komentarz
         -->
     </head>
     <body>
