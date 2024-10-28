@@ -1,11 +1,13 @@
 <html>
     <head>
+
         <!-- 
-        komentarz
-        kom
-        kom
-        komentarz
+            komentarz
+            kom
+            kom
+            komentarz
         -->
+            
     </head>
     <body>
     <form method="GET" action="odbierz4.php">
