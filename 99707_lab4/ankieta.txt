@@ -1,7 +1,7 @@
-javaScript:10
+javaScript:18
 PHP:3
-C:1
-CPP:1
+C:4
+CPP:2
 CSS:1
 XML:1
 Java:1

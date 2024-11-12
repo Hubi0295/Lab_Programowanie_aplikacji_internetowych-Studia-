@@ -12,3 +12,4 @@ Kontowy, 24, polska, hubert.szelepusta@gmail.com, visa, CPP, Java, HTML
 Tarka, 16, polska, hubert.szelepusta@gmail.com, visa, Java
 Szelepusta, 22, polska, hubert.szelepusta@gmail.com, visa, Java, C#
 Tera, 22, polska, hubert.szelepusta@gmail.com, visa, Java, C#
+Szelepusta, 12, polska, hubert.szelepusta@gmail.com, visa, Java
