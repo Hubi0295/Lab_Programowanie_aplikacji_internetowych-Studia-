@@ -1,8 +1,4 @@
 <!DOCTYPE html>
-<!--
-Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
-Click nbfs://nbhost/SystemFileSystem/Templates/Scripting/EmptyPHPWebPage.php to edit this template
--->
 <html>
     <head>
         <meta charset="UTF-8">
@@ -24,7 +20,7 @@ Click nbfs://nbhost/SystemFileSystem/Templates/Scripting/EmptyPHPWebPage.php to 
             ["Agata", "Agatowska", 4.67, true],
             date(DateTime::ATOM,time())
         ];
-        for($i=0;$i<12;$i++){
+        for($i=0;$i<count($values);$i++){
             if(is_numeric($values[$i])){
                 echo "To jest zmienna numeric: "."$values[$i]"."<br>";
             }

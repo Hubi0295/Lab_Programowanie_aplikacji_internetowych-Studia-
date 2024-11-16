@@ -13,44 +13,39 @@ if (isset($_REQUEST["submit"])) {
 
 function dodaj() {
     $dane = "";
-    if (isset($_REQUEST["nazwisko"])&&$_REQUEST["nazwisko"]!=""&&isset($_REQUEST["wiek"])&&$_REQUEST["wiek"]!=""&&isset($_REQUEST["email"])&&$_REQUEST["email"]!=""&&isset($_REQUEST["panstwo"])&&isset($_REQUEST["sposobyPlatnosci"])&&isset($_REQUEST["jezyki"])) {
-        foreach($_POST  as $key=>$value){
-            if($key!="submit"&&!is_array($value)){
-                $dane .= htmlspecialchars($value).",";
+    if (isset($_REQUEST["nazwisko"])&&$_REQUEST["nazwisko"]!=""&&isset($_REQUEST["wiek"])&&$_REQUEST["wiek"]!=""&&isset($_REQUEST["email"])&&$_REQUEST["email"]!=""&&isset($_REQUEST["panstwo"])&&isset($_REQUEST["sposobyPlatnosci"])) {
+        foreach($_REQUEST as $key=>$value){
+            if(!is_array($_REQUEST[$key]) && $key!="submit"){
+                $dane .= htmlspecialchars($_REQUEST[$key]).", ";
             }
         }
-        $wybraneTutoriale="";
-        foreach($_REQUEST['jezyki'] as $jezyk) {
-            $wybraneTutoriale .= $jezyk.", ";
-        }
-    
-        $dane .=substr($wybraneTutoriale,0,strlen($wybraneTutoriale)-2)."\n";
-    
-        @ $wp = fopen("dane.txt","a",1);
-        if ($wp)
-        { 
-            fwrite($wp,$dane);
-        }
-        else{
-            echo "Nie mozna zapisac do pliku";
-        }
-        fclose($wp);
     }
     else{
         echo "<br>Nie podano wszystkich danych";
+        return;
     }
-
+    $wybraneTutoriale="";
+    foreach($_REQUEST['jezyki'] as $jezyk) {
+        $wybraneTutoriale .= $jezyk.", ";
+    }
+    $dane .=substr($wybraneTutoriale,0,strlen($wybraneTutoriale)-2)."\n";
+    @ $wp = fopen("dane.txt","a",1);
+    if ($wp)
+    { 
+        fwrite($wp,$dane);
+    }
+    fclose($wp);
 }
 
 function pokaz_zamowienie($tut) {
     @ $plik = file("dane.txt");
-    echo "
-        <table border=1>
-        <tr>
-            <th>Nazwisko</th><th>Wiek</th><th>Panstwo</th><th>Email</th><th>Sposob platnosci</th><th colspan=9>Jezyki</th>
-        </tr>";
     if ($plik)
     { 
+        echo "
+        <table border=1>
+        <tr>
+            <th>Nazwisko</th><th>Wiek</th><th>Email</th><th>Panstwo</th><th>Sposob platnosci</th><th colspan=9>Jezyki</th>
+        </tr>";
         for ( $i=0; $i<count($plik); $i++)
         {
             $dane = explode(",",$plik[$i]);
@@ -62,11 +57,10 @@ function pokaz_zamowienie($tut) {
                 echo "</tr>";
             }
         }
+        echo "</table>";
     }
     else{
-        echo "<br>Nie mozna otworzyc pliku<br>";
+        echo "<br> Nie udalo sie wyswietlic pliku";
     }
-    echo "</table>";
-
    }   
 ?>

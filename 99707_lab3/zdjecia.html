@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <title>Przesyłanie zdjęć</title>
+</head>
+<body>
+    <form method="post" action="zdjecia.php" enctype="multipart/form-data">
+        Max. wys.: <input type="number" name="wys" min="100" max="500" required><br/>
+        Max. szer.: <input type="number" name="szer" min="100" max="500" required><br/>
+        Plik .jpg: <input type="file" name="zdjecie" accept="image/jpeg" required><br/>
+        <input type="submit" value="Zapisz" name="zapisz">
+    </form>
+</body>
+</html>
