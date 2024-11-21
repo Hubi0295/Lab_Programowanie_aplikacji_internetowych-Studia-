@@ -1,6 +1,5 @@
 <?php
 
-
 function walidacja() {
     $args = [
         'nazwisko' => [

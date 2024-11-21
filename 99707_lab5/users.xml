@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<users>
+    <user>
+        <userName>admin</userName>
+        <passwd>admin</passwd>
+        <fullName>Administrator</fullName>
+        <email>admin@gmail.com</email>
+        <date>2018-09-10</date>
+        <status>2</status>
+    </user>
+    <user>
+        <userName>beatap</userName>
+        <passwd>beatap</passwd>
+        <fullName>Beata P.</fullName>
+        <email>beatap@gmail.com</email>
+        <date>2018-10-10</date>
+        <status>1</status>
+    </user>
+    <user>
+        <userName>Marek</userName>
+        <fullName>Brzezinski</fullName>
+        <passwd>$2y$10$Dijwzghqa5ChyU1WBEqI1u8JuLsusMsrra26NGWL.CtbV5vUsNZp2</passwd>
+        <email>hubert.szelepusta@gmail.com</email>
+        <status>1</status>
+        <date>2024-11-16</date>
+    </user>
+    <user>
+        <userName>Marek</userName>
+        <fullName>Brzezinski</fullName>
+        <passwd>$2y$10$rzY3Y0p7f6sHwmCH5bfvHOwH/HtRLB8ZOUJuMBe04wx5P0i5maNLC</passwd>
+        <email>hubert.szelepusta@gmail.com</email>
+        <status>1</status>
+        <date>2024-11-16</date>
+    </user>
+    <user>
+        <userName>Hubert</userName>
+        <fullName>Hubert S</fullName>
+        <passwd>$2y$10$r8biuU5DbrNmcmFLsasIb.EPPSOoeEoUaaOmS/76EaFP6wvKPCu3u</passwd>
+        <email>hubert.szelepusta@gmail.com</email>
+        <status>1</status>
+        <date>2024-11-16</date>
+    </user>
+</users>
