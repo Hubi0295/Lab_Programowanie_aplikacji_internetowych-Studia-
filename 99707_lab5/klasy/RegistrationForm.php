@@ -11,7 +11,8 @@ class RegistrationForm
             Haslo: <br /><input type="password" name="passwd" /><br />
             Pelna nazwa: <br /><input name="fullName" /><br />
             Email: <br /><input type="email" name="email" /><br />
-            <button type="submit">Wyslij</button>
+            <button type="submit">Rejestruj</button>
+            <button type="reset">Anuluj</button>
         </form>
         </p>
         <?php

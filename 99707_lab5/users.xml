@@ -40,4 +40,4 @@
         <status>1</status>
         <date>2024-11-16</date>
     </user>
-</users>
+<user><userName>Testowy</userName><fullName>Testowy </fullName><passwd>$2y$10$hTsfi0zx.qx9NWUItA8XF./UbQ3zZ0DWEZAFdkSZvb0mvwI13EZRW</passwd><email>hubert.szelepust@gmail.com</email><status>1</status><date>2024-11-21</date></user><user><userName>Testowy</userName><fullName>Testowy Mark</fullName><passwd>$2y$10$3QOPiXYeiT8myGTmze5foOWH/2Nb14hVyhkgg5KV2Rj898y7uioJW</passwd><email>hubert.szelepusta@gmail.com</email><status>1</status><date>2024-11-21</date></user><user><userName>Jakub</userName><fullName>Jakub T</fullName><passwd>$2y$10$UpPxrM3NwveKRFs2sggnhemWYX8wnBcz50rtPagps0zyRUbP2eMci</passwd><email>hubert.szelepusta@gmail.com</email><status>1</status><date>2024-11-21</date></user></users>

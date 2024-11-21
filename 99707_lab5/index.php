@@ -31,7 +31,7 @@ include_once('klasy/RegistrationForm.php');
     }
  }
  User::getAllUsers("users.json");
- User::getAllUsersFromXML("users.xml");
+//  User::getAllUsersFromXML("users.xml");
 
 
 ?>
