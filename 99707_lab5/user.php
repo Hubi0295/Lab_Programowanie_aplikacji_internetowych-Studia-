@@ -1,5 +1,6 @@
 <?php
 class User {
+    
     const STATUS_USER = 1;
     const STATUS_ADMIN = 2;
     protected $userName;
